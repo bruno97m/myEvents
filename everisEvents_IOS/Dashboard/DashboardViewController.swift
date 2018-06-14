@@ -24,7 +24,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         return dashArray.count
     }
     
-    
+   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if  indexPath.section == 1 {
             return 180
@@ -63,10 +63,9 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
 
         tableviewDash.delegate = self
         tableviewDash.dataSource = self
-        tableviewDash.register(UINib(nibName: "MyLabel" , bundle: nil), forCellReuseIdentifier: "MyLabel")
-        tableviewDash.register(UINib(nibName: "MyImage" , bundle: nil), forCellReuseIdentifier: "MyImage")
         tableviewDash.register(UINib(nibName: "News", bundle: nil), forCellReuseIdentifier: "News")
         tableviewDash.register(UINib(nibName: "EventDash", bundle: nil), forCellReuseIdentifier: "EventDash")
+        tableviewDash.register(UINib(nibName: "EventCalendar", bundle: nil), forCellReuseIdentifier: "EventCalendar")
        
       
       

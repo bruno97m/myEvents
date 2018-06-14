@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0404EB3C20D1F28B005135CE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404EB3B20D1F28B005135CE /* CalendarViewController.swift */; };
 		0421EA2920CC467C00F61E93 /* EventDash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421EA2720CC467C00F61E93 /* EventDash.swift */; };
 		0421EA2A20CC467C00F61E93 /* EventDash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421EA2820CC467C00F61E93 /* EventDash.xib */; };
 		04921A4A20CC2CB7004C3C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04921A4920CC2CB7004C3C0D /* AppDelegate.swift */; };
-		04921A4C20CC2CB7004C3C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04921A4B20CC2CB7004C3C0D /* ViewController.swift */; };
 		04921A5120CC2CB7004C3C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04921A5020CC2CB7004C3C0D /* Assets.xcassets */; };
 		04921A5420CC2CB7004C3C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04921A5220CC2CB7004C3C0D /* LaunchScreen.storyboard */; };
 		04921A5F20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04921A5E20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift */; };
 		04D47CB720CC3240009E86E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04D47CB620CC3240009E86E6 /* Info.plist */; };
+		04E105C320D2BC8D0025130C /* EventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E105C120D2BC8D0025130C /* EventCalendar.swift */; };
+		04E105C420D2BC8D0025130C /* EventCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E105C220D2BC8D0025130C /* EventCalendar.xib */; };
+		04E105C820D2C3850025130C /* CellEventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E105C720D2C3850025130C /* CellEventCalendar.swift */; };
 		04E7A51D20CEBE9E00607C89 /* News.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E7A51C20CEBE9E00607C89 /* News.xib */; };
 		04E7A52320CEBFED00607C89 /* DashboardBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A52220CEBFED00607C89 /* DashboardBusiness.swift */; };
 		04E7A52520CEC02500607C89 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A52420CEC02500607C89 /* DashboardViewController.swift */; };
@@ -39,17 +42,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0404EB3B20D1F28B005135CE /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0421EA2720CC467C00F61E93 /* EventDash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDash.swift; sourceTree = "<group>"; };
 		0421EA2820CC467C00F61E93 /* EventDash.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDash.xib; sourceTree = "<group>"; };
 		04921A4620CC2CB7004C3C0D /* everisEvents_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = everisEvents_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04921A4920CC2CB7004C3C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04921A4B20CC2CB7004C3C0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04921A5020CC2CB7004C3C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04921A5320CC2CB7004C3C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04921A5A20CC2CB7004C3C0D /* everisEvents_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = everisEvents_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04921A5E20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everisEvents_IOSUITests.swift; sourceTree = "<group>"; };
 		04921A6020CC2CB7004C3C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D47CB620CC3240009E86E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E105C120D2BC8D0025130C /* EventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCalendar.swift; sourceTree = "<group>"; };
+		04E105C220D2BC8D0025130C /* EventCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCalendar.xib; sourceTree = "<group>"; };
+		04E105C720D2C3850025130C /* CellEventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventCalendar.swift; sourceTree = "<group>"; };
 		04E7A51C20CEBE9E00607C89 /* News.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = News.xib; sourceTree = "<group>"; };
 		04E7A52220CEBFED00607C89 /* DashboardBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardBusiness.swift; sourceTree = "<group>"; };
 		04E7A52420CEC02500607C89 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +104,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		0485B09120D036D7002E516B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0404EB3B20D1F28B005135CE /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		04921A3D20CC2CB7004C3C0D = {
 			isa = PBXGroup;
 			children = (
@@ -121,12 +135,12 @@
 		04921A4820CC2CB7004C3C0D /* everisEvents_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				0485B09120D036D7002E516B /* Calendar */,
 				04D47CB120CC2F89009E86E6 /* Events */,
 				04D47CA320CC2EE9009E86E6 /* CellTypes */,
 				04D47C9820CC2DF2009E86E6 /* Dashboard */,
 				04921A4920CC2CB7004C3C0D /* AppDelegate.swift */,
 				04921A5020CC2CB7004C3C0D /* Assets.xcassets */,
-				04921A4B20CC2CB7004C3C0D /* ViewController.swift */,
 				04E7A53020CEC1C600607C89 /* Main.storyboard */,
 				04921A5220CC2CB7004C3C0D /* LaunchScreen.storyboard */,
 				04D47CB620CC3240009E86E6 /* Info.plist */,
@@ -146,12 +160,14 @@
 		04D47C9820CC2DF2009E86E6 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				04E7A52620CEC03A00607C89 /* News.swift */,
 				04E7A52420CEC02500607C89 /* DashboardViewController.swift */,
 				04E7A52220CEBFED00607C89 /* DashboardBusiness.swift */,
+				04E7A52620CEC03A00607C89 /* News.swift */,
 				04E7A51C20CEBE9E00607C89 /* News.xib */,
 				0421EA2720CC467C00F61E93 /* EventDash.swift */,
 				0421EA2820CC467C00F61E93 /* EventDash.xib */,
+				04E105C120D2BC8D0025130C /* EventCalendar.swift */,
+				04E105C220D2BC8D0025130C /* EventCalendar.xib */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -162,6 +178,7 @@
 				04E7A52C20CEC09C00607C89 /* CellEvent.swift */,
 				04E7A52A20CEC09700607C89 /* CellNews.swift */,
 				04E7A52820CEC08800607C89 /* CellBase.swift */,
+				04E105C720D2C3850025130C /* CellEventCalendar.swift */,
 			);
 			path = CellTypes;
 			sourceTree = "<group>";
@@ -273,6 +290,7 @@
 				04E7A53220CEC1C600607C89 /* Main.storyboard in Resources */,
 				04D47CB720CC3240009E86E6 /* Info.plist in Resources */,
 				04E7A51D20CEBE9E00607C89 /* News.xib in Resources */,
+				04E105C420D2BC8D0025130C /* EventCalendar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,12 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04921A4C20CC2CB7004C3C0D /* ViewController.swift in Sources */,
+				0404EB3C20D1F28B005135CE /* CalendarViewController.swift in Sources */,
 				04E7A52F20CEC0C100607C89 /* EventViewController.swift in Sources */,
 				0421EA2920CC467C00F61E93 /* EventDash.swift in Sources */,
 				04E7A52720CEC03A00607C89 /* News.swift in Sources */,
 				04E7A52B20CEC09700607C89 /* CellNews.swift in Sources */,
 				04921A4A20CC2CB7004C3C0D /* AppDelegate.swift in Sources */,
+				04E105C820D2C3850025130C /* CellEventCalendar.swift in Sources */,
+				04E105C320D2BC8D0025130C /* EventCalendar.swift in Sources */,
 				04E7A52520CEC02500607C89 /* DashboardViewController.swift in Sources */,
 				04E7A52320CEBFED00607C89 /* DashboardBusiness.swift in Sources */,
 				04E7A52D20CEC09C00607C89 /* CellEvent.swift in Sources */,

@@ -15,18 +15,13 @@ class DashBoardBusiness {
     func getDashArray(completion: @escaping (_ dashArray:[[CellBaseProtocol]]) -> ()){
          var dashArray = [[CellBaseProtocol](),[CellBaseProtocol]()]
        
-        let imageview = UIImageView()
+        
         let apiCallEvent = "http://localhost:1337/event"
         let apiCallNews = "http://localhost:1337/news"
         
         let dateFormatter = DateFormatter()
-       // formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" //2017-04-01T18:05:00.000
-       // let date1  = formatter.date(from: "2017-04-01T18:05:00.000Z")
-      //  formatter.dateFormat = "LLLL"
-      //  let resultTime = formatter.string(from: date1!)
-        //print(resultTime)
-        
-       
+
+    
         
         Alamofire.request(apiCallEvent).responseJSON() { response in //Event Request
             
@@ -53,6 +48,7 @@ class DashBoardBusiness {
                     
         
                     dashArray[0].append(CellEvent(cellImage: "nil", cellTitle: title, cellDescription: description, cellDay: dayEvent, cellMonth: monthEvent))
+                    
                 
                 }
         
@@ -73,15 +69,13 @@ class DashBoardBusiness {
                     dashArray[1].append(CellNews(cellImage: imageURL, cellTitle: title, cellDescription: description))
                 }
             
-      
+                dashArray[0].append(CellEventCalendar(cellImage: "calendar", cellLabel: "Calendário Everis"))
                 completion(dashArray)
-                
+            }
+                }
             }
         }
-            
-        }
-        
     }
-    
 }
-}
+                
+

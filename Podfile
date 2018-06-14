@@ -9,8 +9,9 @@ target 'everisEvents_IOS' do
     pod 'Alamofire', '~> 4.7'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'SDWebImage', '~> 4.0'
-    pod 'FSCalendar'
-    
+    pod 'FSCalendar', '~> 2.7.1'
+ 
+
 
   target 'everisEvents_IOSUITests' do
     inherit! :search_paths
