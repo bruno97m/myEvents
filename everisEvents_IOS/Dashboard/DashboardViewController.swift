@@ -26,6 +26,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       
         if  indexPath.section == 1 {
             return 180
         }
@@ -34,6 +35,14 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let lastRow = tableView.numberOfRows(inSection: 0) - 1 // get last row on event section
+        if  (indexPath.section == 0 && indexPath.row == lastRow) {
+            performSegue(withIdentifier: "showCalendar", sender: self)
+        }
+      
+   
+    }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return headerTitles[section]
     }

@@ -35,6 +35,7 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="o3H-qe-rHL"/>
                     <connections>
                         <outlet property="tableviewDash" destination="JIt-RE-ZQc" id="cPg-Ri-eQY"/>
+                        <segue destination="6He-We-8gT" kind="show" identifier="showCalendar" id="cCa-3f-5Jb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJk-bp-dn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -50,30 +51,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-kZ-SGj" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="376"/>
+                                <color key="backgroundColor" red="0.61176470589999998" green="0.68235294120000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="w1z-0b-Ob6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titlePlaceholderColor">
+                                        <color key="value" red="0.39540596230000002" green="0.40129128889999999" blue="0.39506547879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="6He-We-8gT" id="FvF-CW-aQL"/>
                                     <outlet property="delegate" destination="6He-We-8gT" id="wZu-lg-XTn"/>
                                 </connections>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPe-p1-gI3">
+                                <rect key="frame" x="0.0" y="492" width="375" height="269"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cPe-p1-gI3" firstAttribute="top" secondItem="7ew-kZ-SGj" secondAttribute="bottom" id="1m8-LZ-cYN"/>
+                            <constraint firstItem="4HG-U3-1ah" firstAttribute="bottom" secondItem="cPe-p1-gI3" secondAttribute="bottom" id="24z-hX-UEq"/>
                             <constraint firstItem="4HG-U3-1ah" firstAttribute="trailing" secondItem="7ew-kZ-SGj" secondAttribute="trailing" id="N9E-tc-tuj"/>
+                            <constraint firstItem="cPe-p1-gI3" firstAttribute="leading" secondItem="4HG-U3-1ah" secondAttribute="leading" id="b46-fu-4il"/>
                             <constraint firstItem="7ew-kZ-SGj" firstAttribute="leading" secondItem="4HG-U3-1ah" secondAttribute="leading" id="gZF-BY-RSJ"/>
-                            <constraint firstItem="4HG-U3-1ah" firstAttribute="bottom" secondItem="7ew-kZ-SGj" secondAttribute="bottom" id="guC-3a-ZnH"/>
                             <constraint firstItem="7ew-kZ-SGj" firstAttribute="top" secondItem="4HG-U3-1ah" secondAttribute="top" id="rE3-ov-ueW"/>
+                            <constraint firstItem="cPe-p1-gI3" firstAttribute="trailing" secondItem="4HG-U3-1ah" secondAttribute="trailing" id="uls-Bs-fcf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4HG-U3-1ah"/>
                     </view>
                     <connections>
                         <outlet property="Calendar" destination="7ew-kZ-SGj" id="Boi-fb-W3l"/>
+                        <outlet property="TableCalendar" destination="cPe-p1-gI3" id="nmM-RA-0HH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPT-be-bM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="893"/>
+            <point key="canvasLocation" x="1037.5999999999999" y="184.72906403940888"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="tne-QT-ifu">
