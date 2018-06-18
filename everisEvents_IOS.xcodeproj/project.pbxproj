@@ -15,7 +15,6 @@
 		04921A5120CC2CB7004C3C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04921A5020CC2CB7004C3C0D /* Assets.xcassets */; };
 		04921A5420CC2CB7004C3C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04921A5220CC2CB7004C3C0D /* LaunchScreen.storyboard */; };
 		04921A5F20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04921A5E20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift */; };
-		04D163A020D3404C008370A4 /* NewsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1639F20D3404C008370A4 /* NewsDetail.xib */; };
 		04D47CB720CC3240009E86E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04D47CB620CC3240009E86E6 /* Info.plist */; };
 		04E105C320D2BC8D0025130C /* EventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E105C120D2BC8D0025130C /* EventCalendar.swift */; };
 		04E105C420D2BC8D0025130C /* EventCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E105C220D2BC8D0025130C /* EventCalendar.xib */; };
@@ -27,7 +26,6 @@
 		04E7A52920CEC08800607C89 /* CellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A52820CEC08800607C89 /* CellBase.swift */; };
 		04E7A52B20CEC09700607C89 /* CellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A52A20CEC09700607C89 /* CellNews.swift */; };
 		04E7A52D20CEC09C00607C89 /* CellEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A52C20CEC09C00607C89 /* CellEvent.swift */; };
-		04E7A52F20CEC0C100607C89 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A52E20CEC0C100607C89 /* EventViewController.swift */; };
 		04E7A53220CEC1C600607C89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E7A53020CEC1C600607C89 /* Main.storyboard */; };
 		47E66A7C0128FD77004CD82F /* Pods_everisEvents_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD9E86F1085BB70CF4C81D8 /* Pods_everisEvents_IOS.framework */; };
 		DBD8770C19EC8CBAB00CC48F /* Pods_everisEvents_IOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EA573110220FD524C20238 /* Pods_everisEvents_IOSUITests.framework */; };
@@ -55,7 +53,6 @@
 		04921A5A20CC2CB7004C3C0D /* everisEvents_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = everisEvents_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04921A5E20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everisEvents_IOSUITests.swift; sourceTree = "<group>"; };
 		04921A6020CC2CB7004C3C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D1639F20D3404C008370A4 /* NewsDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetail.xib; sourceTree = "<group>"; };
 		04D47CB620CC3240009E86E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E105C120D2BC8D0025130C /* EventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCalendar.swift; sourceTree = "<group>"; };
 		04E105C220D2BC8D0025130C /* EventCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCalendar.xib; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		04E7A52820CEC08800607C89 /* CellBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellBase.swift; sourceTree = "<group>"; };
 		04E7A52A20CEC09700607C89 /* CellNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellNews.swift; sourceTree = "<group>"; };
 		04E7A52C20CEC09C00607C89 /* CellEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellEvent.swift; sourceTree = "<group>"; };
-		04E7A52E20CEC0C100607C89 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		04E7A53120CEC1C600607C89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51C64613861BE00B8423CF5C /* Pods-everisEvents_IOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everisEvents_IOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-everisEvents_IOSUITests/Pods-everisEvents_IOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FD04A55443EBF95C5E02343 /* Pods-everisEvents_IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everisEvents_IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-everisEvents_IOS/Pods-everisEvents_IOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +139,6 @@
 				04D1639A20D33C7B008370A4 /* NewsDetails */,
 				04D1639920D33C64008370A4 /* EventDetails */,
 				0485B09120D036D7002E516B /* Calendar */,
-				04D47CB120CC2F89009E86E6 /* Events */,
 				04D47CA320CC2EE9009E86E6 /* CellTypes */,
 				04D47C9820CC2DF2009E86E6 /* Dashboard */,
 				04921A4920CC2CB7004C3C0D /* AppDelegate.swift */,
@@ -174,7 +169,6 @@
 		04D1639A20D33C7B008370A4 /* NewsDetails */ = {
 			isa = PBXGroup;
 			children = (
-				04D1639F20D3404C008370A4 /* NewsDetail.xib */,
 			);
 			path = NewsDetails;
 			sourceTree = "<group>";
@@ -203,14 +197,6 @@
 				04E105C720D2C3850025130C /* CellEventCalendar.swift */,
 			);
 			path = CellTypes;
-			sourceTree = "<group>";
-		};
-		04D47CB120CC2F89009E86E6 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				04E7A52E20CEC0C100607C89 /* EventViewController.swift */,
-			);
-			path = Events;
 			sourceTree = "<group>";
 		};
 		CCC9FF70CBAE4E3A44682D1D /* Frameworks */ = {
@@ -313,7 +299,6 @@
 				04D47CB720CC3240009E86E6 /* Info.plist in Resources */,
 				04E7A51D20CEBE9E00607C89 /* News.xib in Resources */,
 				04E105C420D2BC8D0025130C /* EventCalendar.xib in Resources */,
-				04D163A020D3404C008370A4 /* NewsDetail.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0404EB3C20D1F28B005135CE /* CalendarViewController.swift in Sources */,
-				04E7A52F20CEC0C100607C89 /* EventViewController.swift in Sources */,
 				0421EA2920CC467C00F61E93 /* EventDash.swift in Sources */,
 				04E7A52720CEC03A00607C89 /* News.swift in Sources */,
 				04E7A52B20CEC09700607C89 /* CellNews.swift in Sources */,

@@ -27,6 +27,14 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         return formatter
     }()
     
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let dateString = self.dateFormatter.string(from: date)
+        
+        if self.eventDate.contains(dateString) {
+          print("jfjajfjkdsjsdlsgsngs.g")
+        }
+            
+    }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         let dateString = self.dateFormatter.string(from: date)
@@ -51,6 +59,9 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.white
+       
         tableCalendar.delegate = self
         tableCalendar.dataSource = self
         Calendar.delegate = self

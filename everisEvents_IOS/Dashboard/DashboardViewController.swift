@@ -31,12 +31,24 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let lastRow = tableView.numberOfRows(inSection: 0) - 1
+        if  (indexPath.section == 0 && indexPath.row == lastRow) {
+            return indexPath
+        }
+            return nil
+       
+    }
+    
+   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let lastRow = tableView.numberOfRows(inSection: 0) - 1 // get last row on event section
         if  (indexPath.section == 0 && indexPath.row == lastRow) {
             performSegue(withIdentifier: "showCalendar", sender: self)
         }
+        tableView.deselectRow(at: indexPath, animated: true) // Deselect when we select row
       
+
    
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -49,13 +61,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dashArray[indexPath.section][indexPath.row].buildCell(indexPath: indexPath, tableview: tableviewDash)
+        let lastRow = tableView.numberOfRows(inSection: 0) - 1
         return cell
     }
     
    
-
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +90,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         })
         
       
-        
-        
-        
-     
- 
+
     }
     
     

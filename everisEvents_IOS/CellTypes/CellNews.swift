@@ -22,7 +22,7 @@ class CellNews: CellBase {
         self.cellImage = cellImage
         self.cellDescription = cellDescription
         
-        self.heigth = 160 
+        self.heigth = 190 
     
     }
     
