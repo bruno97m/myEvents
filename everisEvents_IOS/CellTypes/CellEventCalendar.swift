@@ -19,6 +19,8 @@ class CellEventCalendar : CellBase {
         super.init(ID: cellId)
         self.cellImage = cellImage
         self.cellLabel = cellLabel
+        
+        self.heigth = 70
     }
 
     override func buildCell(indexPath: IndexPath, tableview: UITableView) -> UITableViewCell{

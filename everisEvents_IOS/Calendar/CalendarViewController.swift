@@ -27,11 +27,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         return formatter
     }()
     
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        let dateString = self.dateFormatter.string(from: date)
-        
-        if self.eventDate.contains(dateString) {
-    }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         let dateString = self.dateFormatter.string(from: date)

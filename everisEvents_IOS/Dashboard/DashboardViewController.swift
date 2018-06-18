@@ -27,11 +27,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        
-        if  indexPath.section == 1 {
-            return 180
-        }
-        
-        return 160
+        return CGFloat(dashArray[indexPath.section][indexPath.row].heigth)
         
     }
     

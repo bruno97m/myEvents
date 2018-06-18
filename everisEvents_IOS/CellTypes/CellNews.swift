@@ -21,6 +21,8 @@ class CellNews: CellBase {
         self.cellTitle = cellTitle
         self.cellImage = cellImage
         self.cellDescription = cellDescription
+        
+        self.heigth = 160 
     
     }
     

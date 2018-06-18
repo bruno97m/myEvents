@@ -71,7 +71,7 @@ class DashBoardBusiness {
                     dashArray[1].append(CellNews(cellImage: imageURL, cellTitle: title, cellDescription: description))
                 }
             
-                dashArray[0].append(CellEventCalendar(cellImage: "calendar", cellLabel: "Calendário Everis"))
+                dashArray[0].append(CellEventCalendar(cellImage: "calendar", cellLabel: "Ver todos os eventos"))
                 completion(dashArray)
             }
                 }

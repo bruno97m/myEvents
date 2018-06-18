@@ -26,7 +26,7 @@ class CellEvent : CellBase {
         self.cellDescription = cellDescription
         self.cellDay = cellDay
         self.cellMonth = cellMonth
-        
+        self.heigth = 97
     }
     
     
