@@ -40,7 +40,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.deselectRow(at: indexPath, animated: true) // Deselect when we select row
       
 
-   
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return headerTitles[section]

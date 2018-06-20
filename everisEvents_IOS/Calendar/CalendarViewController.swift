@@ -28,12 +28,17 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     }()
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+       
         let dateString = self.dateFormatter.string(from: date)
         
         if self.eventDate.contains(dateString) {
-            performSegue(withIdentifier: "showDetailCalendar", sender: self)
-        }
+            calendarBusiness.getCalendarEventsByDate(date: date ,completion: {(calendarEvents : [CellBaseProtocol])-> Void in
+                self.calendarEvents = calendarEvents
+                self.tableCalendar.reloadData()
+            })
             
+        }
+        
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -45,9 +50,9 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         return 0
     }
     
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventDate.count
+        return calendarEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,25 +66,22 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         
         let nav = self.navigationController?.navigationBar
         nav?.tintColor = UIColor.white
-       
+        
         tableCalendar.delegate = self
         tableCalendar.dataSource = self
         Calendar.delegate = self
         Calendar.dataSource = self
-        tableCalendar.register(UINib(nibName: "EventCalendar", bundle: nil), forCellReuseIdentifier: "EventCalendar")
+        tableCalendar.register(UINib(nibName: "CalendarEventT", bundle: nil), forCellReuseIdentifier: "CalendarEventT")
+        
         
         calendarBusiness.getEventDate(completion: {(eventDate : [String])-> Void in
             self.eventDate = eventDate
             self.Calendar.reloadData()
         })
         
-        calendarBusiness.getCalendarEvents(completion: {(calendarEvents : [CellBaseProtocol])-> Void in
-            self.calendarEvents = calendarEvents
-            self.tableCalendar.reloadData()
-        })
         
     }
-
-
-
+    
+    
+    
 }

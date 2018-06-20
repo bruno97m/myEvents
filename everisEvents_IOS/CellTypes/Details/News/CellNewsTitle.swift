@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CellNewsDetailTitle : CellBase {
+class CellNewsTitle : CellBase {
     
     let cellId = "NewsTitle"
     var cellLabel: String!

@@ -14,7 +14,7 @@
 		047310CF20D806280089A0B8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047310CE20D806280089A0B8 /* NewsViewController.swift */; };
 		047310D420D809050089A0B8 /* NewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047310D220D809050089A0B8 /* NewsTitle.swift */; };
 		047310D520D809050089A0B8 /* NewsTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047310D320D809050089A0B8 /* NewsTitle.xib */; };
-		047310D720D810190089A0B8 /* CellNewsDetailTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047310D620D810190089A0B8 /* CellNewsDetailTitle.swift */; };
+		047310D720D810190089A0B8 /* CellNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047310D620D810190089A0B8 /* CellNewsTitle.swift */; };
 		047C7E5C20D8960A006923D9 /* NewsBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C7E5B20D8960A006923D9 /* NewsBusiness.swift */; };
 		04921A4A20CC2CB7004C3C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04921A4920CC2CB7004C3C0D /* AppDelegate.swift */; };
 		04921A5120CC2CB7004C3C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04921A5020CC2CB7004C3C0D /* Assets.xcassets */; };
@@ -22,10 +22,18 @@
 		04921A5F20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04921A5E20CC2CB7004C3C0D /* everisEvents_IOSUITests.swift */; };
 		049ABB2A20D9D5C4003E7944 /* EventDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ABB2820D9D5C4003E7944 /* EventDescription.swift */; };
 		049ABB2B20D9D5C4003E7944 /* EventDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049ABB2920D9D5C4003E7944 /* EventDescription.xib */; };
-		049ABB2D20D9D5FE003E7944 /* CellEventDetailDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ABB2C20D9D5FE003E7944 /* CellEventDetailDesc.swift */; };
+		049ABB2D20D9D5FE003E7944 /* CellEventDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ABB2C20D9D5FE003E7944 /* CellEventDesc.swift */; };
 		049ABB3220D9DE68003E7944 /* NewsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ABB3020D9DE68003E7944 /* NewsDescription.swift */; };
 		049ABB3320D9DE68003E7944 /* NewsDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049ABB3120D9DE68003E7944 /* NewsDescription.xib */; };
-		049ABB3620D9E093003E7944 /* CellNewsDetailDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ABB3520D9E093003E7944 /* CellNewsDetailDesc.swift */; };
+		049ABB3620D9E093003E7944 /* CellNewsDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ABB3520D9E093003E7944 /* CellNewsDesc.swift */; };
+		049F9A3E20D9F08C00F0E11A /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9A3D20D9F08C00F0E11A /* EventViewController.swift */; };
+		049F9A4020D9F0E400F0E11A /* EventBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9A3F20D9F0E400F0E11A /* EventBusiness.swift */; };
+		049F9A4320D9F1CF00F0E11A /* EventTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9A4120D9F1CF00F0E11A /* EventTitle.swift */; };
+		049F9A4420D9F1CF00F0E11A /* EventTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049F9A4220D9F1CF00F0E11A /* EventTitle.xib */; };
+		049F9A4820D9F8A500F0E11A /* CellEventTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9A4720D9F8A500F0E11A /* CellEventTitle.swift */; };
+		04C8F36220DAB1A500C971DB /* CalendarEventT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8F36020DAB1A500C971DB /* CalendarEventT.swift */; };
+		04C8F36320DAB1A500C971DB /* CalendarEventT.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8F36120DAB1A500C971DB /* CalendarEventT.xib */; };
+		04C8F36520DAB40800C971DB /* CellCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8F36420DAB40800C971DB /* CellCalendar.swift */; };
 		04E105C320D2BC8D0025130C /* EventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E105C120D2BC8D0025130C /* EventCalendar.swift */; };
 		04E105C420D2BC8D0025130C /* EventCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E105C220D2BC8D0025130C /* EventCalendar.xib */; };
 		04E105C820D2C3850025130C /* CellEventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E105C720D2C3850025130C /* CellEventCalendar.swift */; };
@@ -59,7 +67,7 @@
 		047310CE20D806280089A0B8 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		047310D220D809050089A0B8 /* NewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTitle.swift; sourceTree = "<group>"; };
 		047310D320D809050089A0B8 /* NewsTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTitle.xib; sourceTree = "<group>"; };
-		047310D620D810190089A0B8 /* CellNewsDetailTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNewsDetailTitle.swift; sourceTree = "<group>"; };
+		047310D620D810190089A0B8 /* CellNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNewsTitle.swift; sourceTree = "<group>"; };
 		047C7E5B20D8960A006923D9 /* NewsBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsBusiness.swift; sourceTree = "<group>"; };
 		04921A4620CC2CB7004C3C0D /* everisEvents_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = everisEvents_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04921A4920CC2CB7004C3C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,10 +78,18 @@
 		04921A6020CC2CB7004C3C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049ABB2820D9D5C4003E7944 /* EventDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescription.swift; sourceTree = "<group>"; };
 		049ABB2920D9D5C4003E7944 /* EventDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDescription.xib; sourceTree = "<group>"; };
-		049ABB2C20D9D5FE003E7944 /* CellEventDetailDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventDetailDesc.swift; sourceTree = "<group>"; };
+		049ABB2C20D9D5FE003E7944 /* CellEventDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventDesc.swift; sourceTree = "<group>"; };
 		049ABB3020D9DE68003E7944 /* NewsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDescription.swift; sourceTree = "<group>"; };
 		049ABB3120D9DE68003E7944 /* NewsDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDescription.xib; sourceTree = "<group>"; };
-		049ABB3520D9E093003E7944 /* CellNewsDetailDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNewsDetailDesc.swift; sourceTree = "<group>"; };
+		049ABB3520D9E093003E7944 /* CellNewsDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNewsDesc.swift; sourceTree = "<group>"; };
+		049F9A3D20D9F08C00F0E11A /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		049F9A3F20D9F0E400F0E11A /* EventBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBusiness.swift; sourceTree = "<group>"; };
+		049F9A4120D9F1CF00F0E11A /* EventTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTitle.swift; sourceTree = "<group>"; };
+		049F9A4220D9F1CF00F0E11A /* EventTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTitle.xib; sourceTree = "<group>"; };
+		049F9A4720D9F8A500F0E11A /* CellEventTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventTitle.swift; sourceTree = "<group>"; };
+		04C8F36020DAB1A500C971DB /* CalendarEventT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventT.swift; sourceTree = "<group>"; };
+		04C8F36120DAB1A500C971DB /* CalendarEventT.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarEventT.xib; sourceTree = "<group>"; };
+		04C8F36420DAB40800C971DB /* CellCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCalendar.swift; sourceTree = "<group>"; };
 		04D47CB620CC3240009E86E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E105C120D2BC8D0025130C /* EventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCalendar.swift; sourceTree = "<group>"; };
 		04E105C220D2BC8D0025130C /* EventCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCalendar.xib; sourceTree = "<group>"; };
@@ -130,6 +146,8 @@
 			children = (
 				0404EB3B20D1F28B005135CE /* CalendarViewController.swift */,
 				044CFC1920D572A800514D99 /* CalendarBusiness.swift */,
+				04C8F36020DAB1A500C971DB /* CalendarEventT.swift */,
+				04C8F36120DAB1A500C971DB /* CalendarEventT.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -183,6 +201,7 @@
 		049ABB3720D9E0B2003E7944 /* Dash */ = {
 			isa = PBXGroup;
 			children = (
+				04E105C720D2C3850025130C /* CellEventCalendar.swift */,
 				04E7A52C20CEC09C00607C89 /* CellEvent.swift */,
 				04E7A52A20CEC09700607C89 /* CellNews.swift */,
 			);
@@ -192,7 +211,7 @@
 		049ABB3820D9E0C3003E7944 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				04E105C720D2C3850025130C /* CellEventCalendar.swift */,
+				04C8F36420DAB40800C971DB /* CellCalendar.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -200,9 +219,8 @@
 		049ABB3920D9E0D1003E7944 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				047310D620D810190089A0B8 /* CellNewsDetailTitle.swift */,
-				049ABB3520D9E093003E7944 /* CellNewsDetailDesc.swift */,
-				049ABB2C20D9D5FE003E7944 /* CellEventDetailDesc.swift */,
+				049F9A4620D9F82500F0E11A /* News */,
+				049F9A4520D9F81800F0E11A /* Event */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -234,9 +252,31 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		049F9A4520D9F81800F0E11A /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				049F9A4720D9F8A500F0E11A /* CellEventTitle.swift */,
+				049ABB2C20D9D5FE003E7944 /* CellEventDesc.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		049F9A4620D9F82500F0E11A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				047310D620D810190089A0B8 /* CellNewsTitle.swift */,
+				049ABB3520D9E093003E7944 /* CellNewsDesc.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		04D1639920D33C64008370A4 /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
+				049F9A3D20D9F08C00F0E11A /* EventViewController.swift */,
+				049F9A3F20D9F0E400F0E11A /* EventBusiness.swift */,
+				049F9A4120D9F1CF00F0E11A /* EventTitle.swift */,
+				049F9A4220D9F1CF00F0E11A /* EventTitle.xib */,
 				049ABB2820D9D5C4003E7944 /* EventDescription.swift */,
 				049ABB2920D9D5C4003E7944 /* EventDescription.xib */,
 			);
@@ -376,7 +416,9 @@
 				0421EA2A20CC467C00F61E93 /* EventDash.xib in Resources */,
 				04921A5420CC2CB7004C3C0D /* LaunchScreen.storyboard in Resources */,
 				04921A5120CC2CB7004C3C0D /* Assets.xcassets in Resources */,
+				04C8F36320DAB1A500C971DB /* CalendarEventT.xib in Resources */,
 				04E7A53220CEC1C600607C89 /* Main.storyboard in Resources */,
+				049F9A4420D9F1CF00F0E11A /* EventTitle.xib in Resources */,
 				047310D520D809050089A0B8 /* NewsTitle.xib in Resources */,
 				04E7A51D20CEBE9E00607C89 /* News.xib in Resources */,
 				04E105C420D2BC8D0025130C /* EventCalendar.xib in Resources */,
@@ -463,22 +505,28 @@
 			files = (
 				047310D420D809050089A0B8 /* NewsTitle.swift in Sources */,
 				0404EB3C20D1F28B005135CE /* CalendarViewController.swift in Sources */,
+				049F9A3E20D9F08C00F0E11A /* EventViewController.swift in Sources */,
 				0421EA2920CC467C00F61E93 /* EventDash.swift in Sources */,
 				04E7A52720CEC03A00607C89 /* News.swift in Sources */,
+				049F9A4320D9F1CF00F0E11A /* EventTitle.swift in Sources */,
 				04E7A52B20CEC09700607C89 /* CellNews.swift in Sources */,
+				049F9A4020D9F0E400F0E11A /* EventBusiness.swift in Sources */,
 				044CFC1A20D572A800514D99 /* CalendarBusiness.swift in Sources */,
-				049ABB3620D9E093003E7944 /* CellNewsDetailDesc.swift in Sources */,
+				04C8F36520DAB40800C971DB /* CellCalendar.swift in Sources */,
+				049ABB3620D9E093003E7944 /* CellNewsDesc.swift in Sources */,
 				047C7E5C20D8960A006923D9 /* NewsBusiness.swift in Sources */,
 				04921A4A20CC2CB7004C3C0D /* AppDelegate.swift in Sources */,
-				049ABB2D20D9D5FE003E7944 /* CellEventDetailDesc.swift in Sources */,
+				049ABB2D20D9D5FE003E7944 /* CellEventDesc.swift in Sources */,
 				047310CF20D806280089A0B8 /* NewsViewController.swift in Sources */,
+				04C8F36220DAB1A500C971DB /* CalendarEventT.swift in Sources */,
 				049ABB2A20D9D5C4003E7944 /* EventDescription.swift in Sources */,
 				04E105C820D2C3850025130C /* CellEventCalendar.swift in Sources */,
 				04E105C320D2BC8D0025130C /* EventCalendar.swift in Sources */,
 				04E7A52520CEC02500607C89 /* DashboardViewController.swift in Sources */,
 				049ABB3220D9DE68003E7944 /* NewsDescription.swift in Sources */,
+				049F9A4820D9F8A500F0E11A /* CellEventTitle.swift in Sources */,
 				04E7A52320CEBFED00607C89 /* DashboardBusiness.swift in Sources */,
-				047310D720D810190089A0B8 /* CellNewsDetailTitle.swift in Sources */,
+				047310D720D810190089A0B8 /* CellNewsTitle.swift in Sources */,
 				04E7A52D20CEC09C00607C89 /* CellEvent.swift in Sources */,
 				04E7A52920CEC08800607C89 /* CellBase.swift in Sources */,
 			);

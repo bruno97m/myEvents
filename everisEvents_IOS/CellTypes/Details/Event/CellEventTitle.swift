@@ -1,5 +1,5 @@
 //
-//  CellNewsDetailDesc.swift
+//  CellEventTitle.swift
 //  everisEvents_IOS
 //
 //  Created by mac on 20/06/18.
@@ -9,27 +9,28 @@
 import Foundation
 import UIKit
 
-class CellNewsDetailDesc : CellBase {
+class CellEventTitle : CellBase {
     
-    let cellId = "NewsDescription"
+    let cellId = "EventTitle"
     var cellLabel: String!
-    var cellDate: String!
+    var cellImage: String!
     
-    init(cellLabel: String, cellDate: String) {
+    init(cellLabel: String, cellImage: String) {
         super.init(ID: cellId)
         self.cellLabel = cellLabel
-        self.cellDate = cellDate
+        self.cellImage = cellImage
         
-        self.heigth = 400
+        self.heigth = 300
     }
     
     override func buildCell(indexPath: IndexPath, tableview: UITableView) -> UITableViewCell{
         
-        let cell = super.buildCell(indexPath: indexPath, tableview: tableview) as! NewsDescription
-        cell.setUp(description: cellLabel, date: cellDate)
+        let cell = super.buildCell(indexPath: indexPath, tableview: tableview) as! EventTitle
+        cell.setUp(title: cellLabel, imageName: cellImage)
+        
+        
         return cell
     }
     
     
 }
-

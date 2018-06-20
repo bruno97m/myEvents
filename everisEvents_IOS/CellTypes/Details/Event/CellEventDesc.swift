@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CellEventDetailDesc : CellBase {
+class CellEventDesc : CellBase {
     
     let cellId = "EventDescription"
     var cellInitialDate: String!

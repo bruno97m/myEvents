@@ -26,14 +26,12 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableNews.delegate = self
         tableNews.dataSource = self
-       
+        
         tableNews.register(UINib(nibName: "NewsTitle", bundle: nil), forCellReuseIdentifier: "NewsTitle")
         tableNews.register(UINib(nibName: "NewsDescription", bundle: nil), forCellReuseIdentifier: "NewsDescription")
         

@@ -34,5 +34,7 @@ class EventDescription: UITableViewCell {
         Description.text = description
         eventType.text = type
         
+        
+        
     }
 }
