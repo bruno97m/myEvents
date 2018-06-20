@@ -31,7 +31,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         let dateString = self.dateFormatter.string(from: date)
         
         if self.eventDate.contains(dateString) {
-          print("jfjajfjkdsjsdlsgsngs.g")
+            performSegue(withIdentifier: "showDetailCalendar", sender: self)
         }
             
     }

@@ -31,15 +31,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let lastRow = tableView.numberOfRows(inSection: 0) - 1
-        if  (indexPath.section == 0 && indexPath.row == lastRow) {
-            return indexPath
-        }
-            return nil
-       
-    }
-    
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let lastRow = tableView.numberOfRows(inSection: 0) - 1 // get last row on event section

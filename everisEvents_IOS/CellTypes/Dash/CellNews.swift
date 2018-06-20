@@ -11,10 +11,10 @@ import UIKit
 
 class CellNews: CellBase {
     
-    let cellId = "News"
+    let cellId = "News" // Cell ID
     var cellImage: String!
     var cellTitle: String!
-    var cellDescription: String!
+    var cellDescription: String! 
     
     init(cellImage: String, cellTitle: String, cellDescription: String) {
         super.init(ID: cellId)

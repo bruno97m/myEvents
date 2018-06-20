@@ -35,7 +35,7 @@ class CalendarBusiness {
                     let events = dateFormatter.string(from: dateEvent!)
                     
                     eventDate.append(events)
-                    print (eventDate)
+            
 
         completion (eventDate)
                     

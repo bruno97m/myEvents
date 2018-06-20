@@ -36,6 +36,7 @@
                     <connections>
                         <outlet property="tableviewDash" destination="JIt-RE-ZQc" id="cPg-Ri-eQY"/>
                         <segue destination="6He-We-8gT" kind="show" identifier="showCalendar" id="cCa-3f-5Jb"/>
+                        <segue destination="lSb-7W-Zqp" kind="show" identifier="showDetailDash" id="pNK-Of-eUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJk-bp-dn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,7 +77,7 @@
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,41 +108,46 @@
                     <connections>
                         <outlet property="Calendar" destination="7ew-kZ-SGj" id="Boi-fb-W3l"/>
                         <outlet property="TableCalendar" destination="cPe-p1-gI3" id="nmM-RA-0HH"/>
+                        <segue destination="lSb-7W-Zqp" kind="show" identifier="showDetailCalendar" id="8eu-Pm-AKM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPT-be-bM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037.5999999999999" y="184.72906403940888"/>
         </scene>
-        <!--Event View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--News View Controller-->
+        <scene sceneID="FBs-zb-xZX">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EventViewController" customModule="everisEvents_IOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="lSb-7W-Zqp" customClass="NewsViewController" customModule="everisEvents_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="plQ-BW-MGp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-FQ-f0A">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b8v-T0-vXE">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lSb-7W-Zqp" id="aZi-HS-dBX"/>
+                                    <outlet property="delegate" destination="lSb-7W-Zqp" id="FD5-gi-OWo"/>
+                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SEB-FQ-f0A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I2L-LV-eiK"/>
-                            <constraint firstItem="SEB-FQ-f0A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TzL-7h-kTN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SEB-FQ-f0A" secondAttribute="bottom" id="dc3-zu-LPN"/>
-                            <constraint firstItem="SEB-FQ-f0A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kKN-ld-dvy"/>
+                            <constraint firstItem="b8v-T0-vXE" firstAttribute="leading" secondItem="LEL-Ca-WAb" secondAttribute="leading" id="1B7-hw-v0s"/>
+                            <constraint firstItem="b8v-T0-vXE" firstAttribute="bottom" secondItem="LEL-Ca-WAb" secondAttribute="bottom" id="5oE-cE-2n9"/>
+                            <constraint firstItem="b8v-T0-vXE" firstAttribute="trailing" secondItem="LEL-Ca-WAb" secondAttribute="trailing" id="dsO-5g-r3v"/>
+                            <constraint firstItem="b8v-T0-vXE" firstAttribute="top" secondItem="LEL-Ca-WAb" secondAttribute="top" id="tvt-jC-Xmc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="LEL-Ca-WAb"/>
                     </view>
                     <connections>
-                        <outlet property="tableview" destination="SEB-FQ-f0A" id="16G-uu-pSw"/>
+                        <outlet property="tableNews" destination="b8v-T0-vXE" id="EAD-Tc-RnT"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1H-vc-tFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1679" y="185"/>
+            <point key="canvasLocation" x="612" y="896"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="32c-BV-Rpy">
@@ -162,4 +168,7 @@
             <point key="canvasLocation" x="-719.20000000000005" y="184.72906403940888"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8eu-Pm-AKM"/>
+    </inferredMetricsTieBreakers>
 </document>

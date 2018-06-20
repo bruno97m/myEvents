@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class CellBase: CellBaseProtocol{
-    var heigth: Int!
-    var ID: String!
+    var heigth: Int! //Cell height
+    var ID: String! //Cell ID
     
     func buildCell(indexPath: IndexPath, tableview: UITableView) -> UITableViewCell{
         return tableview.dequeueReusableCell(withIdentifier: ID, for: indexPath)
