@@ -22,18 +22,25 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jme-NY-QE9">
+                                <rect key="frame" x="169" y="414.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.61176470589999998" green="0.68235294120000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JIt-RE-ZQc" firstAttribute="leading" secondItem="xHe-N6-q0M" secondAttribute="leading" id="1ZS-yb-v1b"/>
                             <constraint firstAttribute="bottom" secondItem="JIt-RE-ZQc" secondAttribute="bottom" id="ID1-7c-QAq"/>
+                            <constraint firstItem="Jme-NY-QE9" firstAttribute="centerY" secondItem="xHe-N6-q0M" secondAttribute="centerY" id="JzW-1D-Pyx"/>
                             <constraint firstItem="JIt-RE-ZQc" firstAttribute="top" secondItem="xHe-N6-q0M" secondAttribute="top" id="Q3A-G7-hXP"/>
+                            <constraint firstItem="Jme-NY-QE9" firstAttribute="centerX" secondItem="xHe-N6-q0M" secondAttribute="centerX" id="R70-dt-Ge6"/>
                             <constraint firstItem="JIt-RE-ZQc" firstAttribute="trailing" secondItem="xHe-N6-q0M" secondAttribute="trailing" id="t0m-Rb-9BH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xHe-N6-q0M"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="o3H-qe-rHL"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Jme-NY-QE9" id="0Um-H1-gOd"/>
                         <outlet property="tableviewDash" destination="JIt-RE-ZQc" id="cPg-Ri-eQY"/>
                         <segue destination="6He-We-8gT" kind="show" identifier="showCalendar" id="cCa-3f-5Jb"/>
                         <segue destination="lSb-7W-Zqp" kind="show" identifier="showNewsDetail" id="pNK-Of-eUz"/>

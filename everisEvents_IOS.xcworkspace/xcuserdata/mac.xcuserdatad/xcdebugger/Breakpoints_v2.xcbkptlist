@@ -119,7 +119,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "everisEvents_IOS/EventDetails/EventViewController.swift"
-            timestampString = "551806653.4834009"
+            timestampString = "551807147.732633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -165,11 +165,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "everisEvents_IOS/Dashboard/DashboardViewController.swift"
-            timestampString = "551806653.483569"
+            timestampString = "551807147.732733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

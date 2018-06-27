@@ -13,6 +13,7 @@ import Alamofire
 class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableviewDash: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
   
     var dashboardBusiness = DashBoardBusiness()
@@ -100,11 +101,13 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         tableviewDash.register(UINib(nibName: "EventDash", bundle: nil), forCellReuseIdentifier: "EventDash")
         tableviewDash.register(UINib(nibName: "EventCalendar", bundle: nil), forCellReuseIdentifier: "EventCalendar")
        
-      
+        tableviewDash.alpha = 0
       
         dashboardBusiness.getDashArray(completion: {(dashArray : [[CellBaseProtocol]])-> Void in
             self.dashArray = dashArray
             self.tableviewDash.reloadData()
+            self.tableviewDash.alpha = 1
+            self.activityIndicator.alpha = 0
         })
         
       
