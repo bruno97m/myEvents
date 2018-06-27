@@ -13,16 +13,21 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableNews: UITableView!
     
-    var newsBusiness = NewsBusiness ()
-    
-    var newsDetails = [CellBaseProtocol] ()
+    var selectedItem : CellNewsObject?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsDetails.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = newsDetails[indexPath.row].buildCell(indexPath: indexPath, tableview: tableNews)
+        //TODO
+        if(indexPath.row == 0) {
+            let cell = tableNews.dequeueReusableCell(withIdentifier: "NewsTitle", for: indexPath) as! NewsTitle
+            cell.setUp(title: selectedItem!.cellTitle, imageName: selectedItem!.cellImage)
+            return cell
+        }
+        let cell = tableNews.dequeueReusableCell(withIdentifier: "NewsDescription", for: indexPath) as! NewsDescription
+        cell.setUp(description: selectedItem!.cellDescription, date: "")
         return cell
     }
     
@@ -34,11 +39,6 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableNews.register(UINib(nibName: "NewsTitle", bundle: nil), forCellReuseIdentifier: "NewsTitle")
         tableNews.register(UINib(nibName: "NewsDescription", bundle: nil), forCellReuseIdentifier: "NewsDescription")
-        
-        newsBusiness.getNewsScreen(completion: {(newsDetails : [CellBaseProtocol])-> Void in
-            self.newsDetails = newsDetails
-            self.tableNews.reloadData()
-        })
         
     }
 

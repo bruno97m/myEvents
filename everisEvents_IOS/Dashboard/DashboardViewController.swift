@@ -18,7 +18,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     var dashboardBusiness = DashBoardBusiness()
     let headerTitles = ["Próximos Eventos", "Notícias"]
     var dashArray = [[CellBaseProtocol](),[CellBaseProtocol]()]
-  
+    var selectedItem : CellBaseProtocol?
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return dashArray.count
@@ -31,16 +31,45 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-   
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let lastRow = tableView.numberOfRows(inSection: 0) - 1 // get last row on event section
-        if  (indexPath.section == 0 && indexPath.row == lastRow) {
-            performSegue(withIdentifier: "showCalendar", sender: self)
-        }
-        tableView.deselectRow(at: indexPath, animated: true) // Deselect when we select row
-      
 
+        selectedItem = self.dashArray[indexPath.section][indexPath.row]
+
+        if  (indexPath.section == 0 && indexPath.row == lastRow) {
+            performSegue(withIdentifier: "showCalendar", sender: index)
+        }
+        
+        if  (indexPath.section == 0 && !(indexPath.row == lastRow)) {
+            performSegue(withIdentifier: "showEventDetail", sender: self)
+        }
+        
+        if (indexPath.section == 1){
+          performSegue(withIdentifier: "showNewsDetail", sender: self)
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true) // Deselect when we select row
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNewsDetail" {
+            let detailNewsVC = segue.destination as? NewsViewController
+            detailNewsVC?.selectedItem = (selectedItem as! CellNews).cellObject
+        }
+        
+        if segue.identifier == "showEventDetail" {
+            let detailEventVC = segue.destination as? EventViewController
+            detailEventVC?.selectedItem = (selectedItem as! CellEvent).cellObject
+            //TODO
+            //detailEventVC?.selectedItem = selectedItem as! CellEvent
+
+            
+        }
+        
+    }
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return headerTitles[section]
     }
@@ -51,10 +80,9 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dashArray[indexPath.section][indexPath.row].buildCell(indexPath: indexPath, tableview: tableviewDash)
-        let lastRow = tableView.numberOfRows(inSection: 0) - 1
         return cell
     }
-    
+ 
    
     
     override func viewDidLoad() {

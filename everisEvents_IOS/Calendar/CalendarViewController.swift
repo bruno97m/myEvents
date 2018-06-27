@@ -28,7 +28,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     }()
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-       
+        
         let dateString = self.dateFormatter.string(from: date)
         
         if self.eventDate.contains(dateString) {
@@ -36,9 +36,11 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
                 self.calendarEvents = calendarEvents
                 self.tableCalendar.reloadData()
             })
-            
         }
-        
+        else { //days with no events
+            self.calendarEvents.removeAll()
+            self.tableCalendar.reloadData()
+        }
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -49,7 +51,12 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         }
         return 0
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "showCalendarDetail", sender: self)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return calendarEvents.count
@@ -71,7 +78,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         tableCalendar.dataSource = self
         Calendar.delegate = self
         Calendar.dataSource = self
-        tableCalendar.register(UINib(nibName: "CalendarEventT", bundle: nil), forCellReuseIdentifier: "CalendarEventT")
+        tableCalendar.register(UINib(nibName: "EventDash", bundle: nil), forCellReuseIdentifier: "EventDash")
         
         
         calendarBusiness.getEventDate(completion: {(eventDate : [String])-> Void in

@@ -10,7 +10,8 @@ import UIKit
 
 class NewsDescription: UITableViewCell {
 
-    @IBOutlet weak var Description: UITextView!
+   
+    @IBOutlet weak var Description: UILabel!
     @IBOutlet weak var Date: UILabel!
     
     override func awakeFromNib() {

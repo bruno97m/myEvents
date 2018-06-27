@@ -12,15 +12,11 @@ import UIKit
 class CellNews: CellBase {
     
     let cellId = "News" // Cell ID
-    var cellImage: String!
-    var cellTitle: String!
-    var cellDescription: String! 
+    var cellObject : CellNewsObject!
     
     init(cellImage: String, cellTitle: String, cellDescription: String) {
         super.init(ID: cellId)
-        self.cellTitle = cellTitle
-        self.cellImage = cellImage
-        self.cellDescription = cellDescription
+        self.cellObject = CellNewsObject(cellImage: cellImage, cellTitle: cellTitle, cellDescription: cellDescription)
         
         self.heigth = 190 
     
@@ -31,9 +27,21 @@ class CellNews: CellBase {
     override func buildCell(indexPath: IndexPath, tableview: UITableView) -> UITableViewCell{
         
         let cell = super.buildCell(indexPath: indexPath, tableview: tableview) as! News
-        cell.setUp(title: cellTitle, description: cellDescription, imageName: cellImage)
+        cell.setUp(title: cellObject.cellTitle, description: cellObject.cellDescription, imageName: cellObject.cellImage)
         
        
         return cell
+    }
+}
+
+class CellNewsObject {
+    var cellImage: String!
+    var cellTitle: String!
+    var cellDescription: String!
+    
+    init(cellImage: String, cellTitle: String, cellDescription: String) {
+        self.cellTitle = cellTitle
+        self.cellImage = cellImage
+        self.cellDescription = cellDescription
     }
 }

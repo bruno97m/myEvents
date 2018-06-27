@@ -1,8 +1,8 @@
 //
-//  NewsDescription.swift
+//  EventDescription.swift
 //  everisEvents_IOS
 //
-//  Created by mac on 20/06/18.
+//  Created by mac on 22/06/18.
 //  Copyright © 2018 mac. All rights reserved.
 //
 
@@ -10,14 +10,12 @@ import UIKit
 
 class EventDescription: UITableViewCell {
 
-    @IBOutlet weak var initialDate: UILabel!
-    
     @IBOutlet weak var finalDate: UILabel!
-    
-    @IBOutlet weak var Description: UITextView!
-
+    @IBOutlet weak var startDate: UILabel!
     @IBOutlet weak var eventType: UILabel!
    
+    @IBOutlet weak var eventDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,13 +26,12 @@ class EventDescription: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setUp(iniDate: String,finDate: String,description: String,type: String){
-        initialDate.text = iniDate
-        finalDate.text = finDate
-        Description.text = description
+    
+    func setUp(initialDate: String,endDate: String, description: String,type:String){
+        startDate.text = initialDate
+        finalDate.text = endDate
         eventType.text = type
-        
-        
+        eventDescription.text = description
         
     }
 }

@@ -36,7 +36,7 @@
                     <connections>
                         <outlet property="tableviewDash" destination="JIt-RE-ZQc" id="cPg-Ri-eQY"/>
                         <segue destination="6He-We-8gT" kind="show" identifier="showCalendar" id="cCa-3f-5Jb"/>
-                        <segue destination="lSb-7W-Zqp" kind="show" identifier="showNewsDash" id="pNK-Of-eUz"/>
+                        <segue destination="lSb-7W-Zqp" kind="show" identifier="showNewsDetail" id="pNK-Of-eUz"/>
                         <segue destination="icx-cc-fgA" kind="show" identifier="showEventDetail" id="aW3-Ai-8FR"/>
                     </connections>
                 </viewController>
@@ -109,7 +109,7 @@
                     <connections>
                         <outlet property="Calendar" destination="7ew-kZ-SGj" id="Boi-fb-W3l"/>
                         <outlet property="TableCalendar" destination="cPe-p1-gI3" id="nmM-RA-0HH"/>
-                        <segue destination="icx-cc-fgA" kind="show" identifier="showDetailCalendar" id="pZx-4k-AOF"/>
+                        <segue destination="icx-cc-fgA" kind="show" identifier="showCalendarDetail" id="PU6-Jm-AsG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPT-be-bM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,27 +124,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-En-DbQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-tK-KvR">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Nra-En-DbQ" firstAttribute="bottom" secondItem="4N4-u4-9ol" secondAttribute="bottom" id="DVR-zW-O5B"/>
-                            <constraint firstItem="Nra-En-DbQ" firstAttribute="top" secondItem="4N4-u4-9ol" secondAttribute="top" id="P9V-vf-bdt"/>
-                            <constraint firstItem="Nra-En-DbQ" firstAttribute="leading" secondItem="4N4-u4-9ol" secondAttribute="leading" id="ryg-HQ-CaF"/>
-                            <constraint firstItem="Nra-En-DbQ" firstAttribute="trailing" secondItem="4N4-u4-9ol" secondAttribute="trailing" id="whA-L6-MI3"/>
+                            <constraint firstItem="G9p-tK-KvR" firstAttribute="trailing" secondItem="4N4-u4-9ol" secondAttribute="trailing" id="Hh6-GN-Z9K"/>
+                            <constraint firstItem="G9p-tK-KvR" firstAttribute="top" secondItem="4N4-u4-9ol" secondAttribute="top" id="QP3-rP-DVb"/>
+                            <constraint firstItem="G9p-tK-KvR" firstAttribute="leading" secondItem="4N4-u4-9ol" secondAttribute="leading" id="RGb-ZK-cQu"/>
+                            <constraint firstItem="G9p-tK-KvR" firstAttribute="bottom" secondItem="4N4-u4-9ol" secondAttribute="bottom" id="TCs-En-HrP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4N4-u4-9ol"/>
                     </view>
                     <connections>
-                        <outlet property="tableEvent" destination="Nra-En-DbQ" id="nbX-iu-3LN"/>
+                        <outlet property="tableEvent" destination="G9p-tK-KvR" id="maa-rj-Orh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vu1-Iu-vgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690" y="1139"/>
+            <point key="canvasLocation" x="688.79999999999995" y="1138.6699507389162"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="FBs-zb-xZX">
@@ -200,6 +200,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pZx-4k-AOF"/>
+        <segue reference="aW3-Ai-8FR"/>
     </inferredMetricsTieBreakers>
 </document>
