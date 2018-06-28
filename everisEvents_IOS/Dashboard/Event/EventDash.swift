@@ -10,6 +10,8 @@ import UIKit
 
 class EventDash: UITableViewCell {
 
+    @IBOutlet weak var eventEnd: UILabel!
+    @IBOutlet weak var eventStart: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventDay: UILabel!
     @IBOutlet weak var eventMonth: UILabel!
@@ -28,7 +30,7 @@ class EventDash: UITableViewCell {
         // Configure the view for the selected state
     }
         
-        func setUp(title: String, description: String, imageName: String, day: String, month:String){
+    func setUp(title: String, description: String, imageName: String, day: String, month:String, startDate: String,endDate: String){
             eventImage.image = UIImage(named: imageName)
             eventTitle.text = title
             eventDescription.text = description
@@ -36,7 +38,10 @@ class EventDash: UITableViewCell {
             eventMonth.text = month
             eventImage.layer.cornerRadius = eventImage.frame.size.height/2
             eventImage.clipsToBounds = true
-
+            eventEnd.text = endDate
+            eventStart.text = startDate
+            eventEnd.alpha = 0
+            eventStart.alpha = 0
             
         }
 

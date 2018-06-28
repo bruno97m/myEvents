@@ -11,6 +11,7 @@ import UIKit
 
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableNews: UITableView!
     
     var selectedItem : CellNewsObject?
@@ -20,7 +21,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO
+        tableView.allowsSelection = false
         if(indexPath.row == 0) {
             let cell = tableNews.dequeueReusableCell(withIdentifier: "NewsTitle", for: indexPath) as! NewsTitle
             cell.setUp(title: selectedItem!.cellTitle, imageName: selectedItem!.cellImage)
@@ -33,12 +34,13 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.white
         tableNews.delegate = self
         tableNews.dataSource = self
-        
         tableNews.register(UINib(nibName: "NewsTitle", bundle: nil), forCellReuseIdentifier: "NewsTitle")
         tableNews.register(UINib(nibName: "NewsDescription", bundle: nil), forCellReuseIdentifier: "NewsDescription")
+        self.activityIndicator.alpha = 0
         
     }
 

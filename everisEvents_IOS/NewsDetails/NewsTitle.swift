@@ -29,7 +29,7 @@ class NewsTitle: UITableViewCell {
         imageDetails.image = UIImage(named: imageName)
         
         let url = URL(string: "http://localhost:1337" + imageName)
-        imageDetails.sd_setImage(with: url, placeholderImage: UIImage(named: "office"))
+        imageDetails.sd_setImage(with: url, placeholderImage: UIImage(named: "logoeveris"))
     }
     
 }

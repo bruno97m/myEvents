@@ -14,13 +14,14 @@ import FSCalendar
 
 class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableCalendar: UITableView!
     @IBOutlet weak var Calendar: FSCalendar!
     
     var calendarBusiness = CalendarBusiness ()
     var eventDate = [String]()
     var calendarEvents = [CellBaseProtocol] ()
-    
+    var selectedItem : CellBaseProtocol?
     var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -36,8 +37,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
                 self.calendarEvents = calendarEvents
                 self.tableCalendar.reloadData()
             })
-        }
-        else { //days with no events
+        } else { //days with no events
             self.calendarEvents.removeAll()
             self.tableCalendar.reloadData()
         }
@@ -52,6 +52,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         return 0
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedItem = self.calendarEvents[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -67,6 +68,13 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCalendarDetail" {
+            let detailEventVC = segue.destination as? EventViewController
+            detailEventVC?.selectedItem = (selectedItem as! CellEvent).cellObject
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,10 +88,14 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         Calendar.dataSource = self
         tableCalendar.register(UINib(nibName: "EventDash", bundle: nil), forCellReuseIdentifier: "EventDash")
         
-        
+        tableCalendar.alpha = 0
+        Calendar.alpha = 0
         calendarBusiness.getEventDate(completion: {(eventDate : [String])-> Void in
             self.eventDate = eventDate
             self.Calendar.reloadData()
+            self.tableCalendar.alpha = 1
+            self.Calendar.alpha = 1
+            self.activityIndicator.alpha = 0
         })
         
         

@@ -28,7 +28,7 @@ class CalendarBusiness {
                 
                 for item in json.arrayValue {
                     
-                    let StringEvent  = item["Start Date"].stringValue
+                    let StringEvent = item["Start Date"].stringValue
                     
                     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
                     let dateEvent  = dateFormatter.date(from: StringEvent)
@@ -57,16 +57,26 @@ class CalendarBusiness {
                 for item in json.arrayValue {
                     let title = item["Title"].stringValue
                     let description = item["Description"].stringValue
-                    let StringDate  = item["Start Date"].stringValue
+                    
+                    let StringStartDate  = item["Start Date"].stringValue
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-                    let dateEvent  = dateFormatter.date(from: StringDate) //String to date
+                    let startDateEvent  = dateFormatter.date(from: StringStartDate) //String to date
                     dateFormatter.dateFormat = "LLLL" //month from date
-                    let monthEvent = dateFormatter.string(from: dateEvent!) //date to string
+                    let monthEvent = dateFormatter.string(from: startDateEvent!) //date to string
                     dateFormatter.dateFormat = "d" //day from date
-                    let dayEvent = dateFormatter.string(from: dateEvent!)
-                    if(dateEvent == date){
-                        calendarEvents.append(CellEvent(cellImage: "", cellTitle: title, cellDescription: description, cellDay: dayEvent, cellMonth: monthEvent))
+                    let dayEvent = dateFormatter.string(from: startDateEvent!)
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let fullStartDate = dateFormatter.string(from: startDateEvent!)
+                    
+                    let StringEndDate  = item["End Date"].stringValue
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                    let endDateEvent  = dateFormatter.date(from: StringEndDate) //String to date
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let fullEndDate = dateFormatter.string(from: endDateEvent!)
+                    
+                    if(startDateEvent == date){
+                        calendarEvents.append(CellEvent(cellImage: "", cellTitle: title, cellDescription: description, cellDay: dayEvent, cellMonth: monthEvent, cellStartDate: fullStartDate, cellEndDate: fullEndDate ))
                     }
                 }
                 completion(calendarEvents)

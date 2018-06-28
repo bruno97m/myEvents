@@ -28,7 +28,7 @@ class EventTitle: UITableViewCell {
         eventImage.image = UIImage (named: imageName)
       
         let url = URL(string: "http://localhost:1337" + imageName)
-        eventImage.sd_setImage(with: url, placeholderImage: UIImage(named: "office"))
+        eventImage.sd_setImage(with: url, placeholderImage: UIImage(named: "logoeveris"))
     }
     
 }

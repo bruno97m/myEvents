@@ -39,7 +39,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         selectedItem = self.dashArray[indexPath.section][indexPath.row]
 
         if  (indexPath.section == 0 && indexPath.row == lastRow) {
-            performSegue(withIdentifier: "showCalendar", sender: index)
+            performSegue(withIdentifier: "showCalendar", sender: self)
         }
         
         if  (indexPath.section == 0 && !(indexPath.row == lastRow)) {

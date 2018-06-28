@@ -12,14 +12,17 @@ class EventViewController: UIViewController,UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableEvent: UITableView!
    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var selectedItem : CellEventObject?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityIndicator.alpha = 0
         tableEvent.delegate = self
         tableEvent.dataSource = self
-        
+        let nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.white
         tableEvent.register(UINib(nibName: "EventTitle", bundle: nil), forCellReuseIdentifier: "EventTitle")
         tableEvent.register(UINib(nibName: "EventDescription", bundle: nil), forCellReuseIdentifier: "EventDescription")
         
@@ -37,13 +40,14 @@ class EventViewController: UIViewController,UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.allowsSelection = false
         if(indexPath.row == 0) {
             let cell = tableEvent.dequeueReusableCell(withIdentifier: "EventTitle", for: indexPath) as! EventTitle
             cell.setUp(title: selectedItem!.cellTitle, imageName: selectedItem!.cellImage)
             return cell
         }
         let cell = tableEvent.dequeueReusableCell(withIdentifier: "EventDescription", for: indexPath) as! EventDescription
-        cell.setUp(initialDate: "", endDate: "", description: selectedItem!.cellDescription, type: "")
+        cell.setUp(initialDate: selectedItem!.cellStartDate, endDate: selectedItem!.cellEndDate, description: selectedItem!.cellDescription, type: "")
         return cell
     }
     
